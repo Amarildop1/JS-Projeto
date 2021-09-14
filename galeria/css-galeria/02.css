@@ -1,0 +1,137 @@
+@import url("menu.css");
+@import url("footer.css");
+
+/* ***** CONFIG GERAL ***** */
+body{
+  background-image: none;
+}
+
+#main h1{
+  text-align: center;
+  font-size: 1.2rem;
+  margin-bottom: 10%;
+}
+#main a{
+  text-decoration: none;
+}
+
+#main .botao{
+  width: 5.5rem;
+  margin: 10% auto;
+}
+
+#main button.btnVoltar{
+  width: 5.5rem;
+  height: 2.1rem;
+  font-weight: bold;
+  box-shadow: 1px 1px 1px black;
+  border-radius: 5px;
+  background: #ffffff;
+}
+
+/* 20s divididos para 5 imagens + transição */
+.slide{
+  width: 18em;
+  height: 15em;
+  margin: 4% auto;
+  animation: slideFevereiro 30s infinite;
+  animation-direction: alternate;
+}
+/* ***** FIM DA CONFIG GERAL ***** */
+
+
+/* ***** PRIMEIRO BREAKPOINT ***** */
+@media screen and (min-width: 425px){
+  .slide{
+    width: 24em;
+    height: 19em;
+  }
+  #main h1{
+    margin-bottom: 5%;
+  }
+}
+
+/* ***** SEGUNDO BREAKPOINT ***** */
+@media screen and (min-width: 600px){
+  .slide{
+    width: 32em;
+    height: 25em;
+  }
+  #main h1{
+    margin-bottom: 0;
+  }
+  #main .botao{
+    margin: 4% auto;
+  }
+}
+
+/* ***** TERCEIRO BREAKPOINT ***** */
+@media screen and (min-width: 750px){
+  .slide{
+    width: 43em;
+    height: 29em;
+  }
+}
+
+
+/* ***** QUARTO BREAKPOINT ***** */
+@media screen and (min-width: 900px){
+  .slide{
+    width: 50em;
+    height: 30em;
+    margin: 2% auto;
+  }
+
+  #main .botao{
+    width: 5.5rem;
+    margin: 6% auto;
+  }
+}
+
+/* ***** QUINTO BREAKPOINT ***** */
+@media screen and (min-width: 1200px){
+  .slide{
+    width: 60em;
+    height: 35em;
+  }
+  #main .botao{
+    width: 5.5rem;
+    margin: 5% auto;
+  }
+}
+
+
+/* ***** ANIMAÇÃO - SLIDE ***** */
+@keyframes slideFevereiro{
+  0%, 10%{
+    background-image: url(../02/foto6.jpg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+  }
+  20%, 30%{
+    background-image: url(../02/foto7.jpg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+  }
+  40%, 50%{
+    background-image: url(../02/foto8.jpg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+  }
+  60%, 70%{
+    background-image: url(../02/foto9.jpg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+  }
+  80%, 90%{
+    background-image: url(../02/foto10.jpg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+  }
+}
+/* ***** FIM DA ANIMAÇÃO - SLIDE ***** */

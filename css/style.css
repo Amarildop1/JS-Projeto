@@ -1,0 +1,324 @@
+@import url("menu.css");
+
+/*	 Limpar código e verificar redundâncias 	*/
+
+/*
+  Projeto Final de LM - 2019.2
+  Equipe:
+          Amarildo - 20192370028
+          Micael - 20192370029
+  Desenvolvimento de um site para a Liga Pessoense de Basquete.
+*/
+
+/*
+  body{ font-family: 'Lato', 'Ubuntu', sans-serif; }
+  body h1{ font-family: 'Ubuntu', sans-serif;  }
+*/
+
+body a{
+  padding: 1rem;
+}
+
+/* SEÇÃO PRÓXIMOS JOGOS */
+#proximosJogos{
+  text-align: center;
+}
+
+#proximosJogos .proxJogos{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  text-align: center;
+  align-items: center;
+}
+
+.proxJogos img{
+  width: 100px;
+  border-radius: 30%;
+}
+
+
+/* SEÇÃO ÚLTIMOS JOGOS */
+#ultimosJogos{
+  text-align: center;
+}
+
+#ultimosJogos .ultJogos{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  text-align: center;
+  align-items: center;
+}
+
+.ultJogos img{width: 100px;}
+
+
+/* SEÇÃO CLASSIFICAÇÃO */
+#classificacao h1{text-align: center}
+
+@media screen and (max-width: 750px){
+  #classificacao .classifGeral{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    line-height: 1.6rem;
+  }
+  
+  ul.listaParte1,  ul.listaParte2{
+    padding: 10px;
+  }
+
+}
+
+ul{list-style-type: none}
+
+.classifGeral{
+  display: flex;
+  justify-content: center;
+}
+
+/* SEÇÃO VÍDEOS */
+#videos{text-align: center;}
+
+#videos .videoYoutube iframe{
+  box-shadow: 2px 2px 5px black;
+  margin-bottom: 10px;
+}
+
+
+/* SEÇÃO REDES SOCIAIS*/
+#social{text-align: center;}
+
+#social p{display: none}
+
+.redesSociais{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  padding-bottom: 10px;
+}
+
+.redesSociais a{font-size: 2rem;}
+
+.redesSociais a .fa-facebook{color: rgb(4, 51, 153)}
+
+.redesSociais a .fa-youtube{color:rgb(189, 18, 3)}
+
+.redesSociais a .fa-instagram{color:rgb(177, 6, 74)}
+
+
+/* SEÇÃO LIGAÇÃO EXTERNA - LINKS */
+#ligacaoExterna{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  text-align: center;
+}
+
+
+
+/* ***** PRIMEIRO BREAKPOINT ***** */
+@media screen and (min-width: 600px){
+  
+  /* SEÇÃO PRÓXIMOS JOGOS */
+  .proxJogos img{width: 200px;}
+  #proximosJogos h1{font-size: 1.3rem;}
+
+      
+  /* SEÇÃO ÚLTIMOS JOGOS */
+  .ultJogos img{
+    width: 200px;
+  }
+  #ultimosJogos h1{
+    font-size: 1.3rem;
+  }
+  #ultimosJogos .ultJogos .ultimoPlacar p{
+    font-size: 1.8rem;
+  }
+  
+
+  /* SEÇÃO VÍDEOS */
+  #videos .videoYoutube iframe{
+    width: 450px;
+    margin-bottom: 10px;
+  }
+
+  /* SEÇÃO REDES SOCIAIS*/
+  .redesSociais a{
+    font-size: 2.2rem;
+  }
+
+  /* SEÇÃO LIGAÇÃO EXTERNA - LINKS */
+  #ligacaoExterna{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    text-align: center;
+  }
+
+}
+/* ***** FIM DO PRIMEIRO BREAKPOINT ***** */
+
+
+
+/* ***** SEGUNDO BREAKPOINT ***** */
+@media screen and (min-width: 750px){
+ 
+/* SEÇÃO PRÓXIMOS JOGOS */
+  #proximosJogos{
+    grid-area: proximosJogos;  
+  }
+  #proximosJogos img{
+    width: 200px;
+  }
+  #proximosJogos .proxJogos{
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+  }
+
+/* SEÇÃO ÚLTIMOS JOGOS */
+  #ultimosJogos{
+    grid-area: ultimosJogos;
+  }
+
+  #ultimosJogos .ultJogos{
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+  }
+
+/* SEÇÃO CLASSIFICAÇÃO */
+  #classificacao .classifGeral{
+    line-height: 2rem;
+  }
+
+  ul{
+    text-decoration-style: none;
+    margin: 0;
+  }
+
+  .classifGeral{
+  display: flex;
+  flex-direction: column;
+  margin: 0px;
+  }
+ 
+
+/* SEÇÃO VÍDEOS */
+  #videos{
+    grid-area: videos;
+  }
+  #videos .videoYoutube iframe{
+    width: 350px;
+    margin: 5px;
+  }
+
+/* SEÇÃO REDES SOCIAIS */
+  #social{
+    grid-area: social;
+  }
+  .redesSociais{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+  }
+  .redesSociais a{
+    line-height: 5rem;
+    font-size: 3rem;
+  }
+
+/* SEÇÃO LIGAÇÃO EXTERNA - LINKS */
+  #ligacaoExterna{
+    grid-area: ligacaoExterna;
+    align-items: center;
+  }
+
+/* RODAPÉ */
+  .rodape{
+    grid-area: rodape;
+  }
+
+  #main{
+    display: grid;
+    grid-template-columns: 20wh 1fr;
+    grid-template-rows: 20vh 80vh 85vh 60vh 15vh 10vh;
+    grid-template-areas: "header header" 
+                         "proximosJogos proximosJogos" 
+                         "classificacao ultimosJogos"
+                         "social videos"
+                         "ligacaoExterna ligacaoExterna"
+                         "rodape rodape"
+  }
+}
+/* ***** FIM DO SEGUNDO BREAKPOINT ***** */
+
+
+
+/* ***** TERCEIRO BREAKPOINT ***** */
+@media screen and (min-width: 1200px){
+
+  .mainHeader{
+    grid-area: header;
+  }
+    
+  #proximosJogos{
+    grid-area: proximosJogos;  
+  }
+
+  #classificacao{
+    grid-area: classificacao;
+  }
+
+  #videos{
+    grid-area: videos;
+  }
+  #videos .videoYoutube iframe{
+    width: 400px;
+    padding: 5px;
+  }
+
+  #ultimosJogos{
+    grid-area: ultimosJogos;
+  }
+  #ultimosJogos .ultJogos .ultimoPlacar p{
+    font-size: 2.2rem;
+  }
+
+  #social{
+    grid-area: social;
+  }
+  #social p{
+    display: unset;
+    line-height: 3rem;
+  }
+  .redesSociais{
+    display: flex;
+    flex-direction: row;
+  }
+  .redesSociais a{
+    line-height: 6rem;
+    font-size: 3rem;
+  }
+
+  #ligacaoExterna{
+    grid-area: ligacaoExterna;
+  }
+
+  .rodape{
+    grid-area: rodape;
+  }
+
+
+  #main{
+    display: grid;
+    grid-gap: .2%;
+    grid-template-columns: 1fr 3fr 2fr;
+    grid-template-rows: 22vh 72vh 68vh 10vh 12vh;
+    grid-template-areas: "header header header" 
+                         "classificacao proximosJogos videos" 
+                         "ultimosJogos ultimosJogos social"
+                         "ligacaoExterna ligacaoExterna ligacaoExterna"
+                         "rodape rodape rodape"
+  }
+}
+/* ***** FIM DO TERCEIRO BREAKPOINT ***** */

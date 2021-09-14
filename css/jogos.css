@@ -1,0 +1,70 @@
+@import url("menu.css");
+@import url("footer.css");
+
+
+/* ***** CONFIG GERAL ***** */
+body{
+  background-image: none;
+}
+
+h1{
+  text-align: center;
+  font-size: 1.5rem;
+}
+
+/* TABELA */
+table{
+  box-shadow: 2px 2px 5px black;
+  border: 1px solid black;
+  border-collapse: collapse;
+  width:90%;
+  font-size: 90%;
+  margin: 2% auto;
+}
+
+table th{
+  padding: 10px;
+  text-align: center;
+  border: 1px solid black;
+  background: rgba(34, 163, 223);
+}
+
+table td{
+  border: 1px solid black;
+  text-align: center;
+}
+
+tr:nth-child(2n){
+  background: rgba(151, 156, 140, 0.3);
+}
+
+table tr:hover{
+  background: rgba(34, 163, 223, 0.3);
+  font-weight: bold;
+}
+
+.nao-mobile{
+  display: none;
+}
+/* ***** FIM DA CONFIG GERAL ***** */
+
+
+@media screen and (min-width:768px){
+  .mobile{
+    display: none;
+  }
+  .nao-mobile{
+    display: unset;
+  }
+}
+
+
+@media screen and (min-width: 1200px){
+  .x{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+}
+

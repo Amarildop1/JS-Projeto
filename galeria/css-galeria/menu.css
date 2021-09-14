@@ -1,0 +1,272 @@
+﻿/*  REVISAR e limpar código 	*/
+
+/* Responsavel pela integridade do menu e do footer */
+
+body{
+  background-image: url("../img/background.png");
+  background-attachment: fixed;
+  font-family: 'Lato', 'Ubuntu', sans-serif;
+}
+
+body h1{
+  font-family: 'Ubuntu', sans-serif;
+}
+body a{
+  text-decoration: none;
+  color: black;
+  font-weight: bolder;
+}
+body a:hover{
+  color: black;
+  text-decoration: underline;
+  text-shadow: 1px 1px 1px black;
+}
+body a:visited{
+  color: white;
+}
+
+
+.rodape a{
+  color: black;
+}
+
+.rodape{
+  padding-bottom: 5px;
+  font-size: 1.1rem;
+  font-weight: 700;
+}
+
+
+#main .mainHeader, #proximosJogos, #ultimosJogos, #classificacao, #videos, #social, #ligacaoExterna, .rodape{
+  box-shadow: 2px 2px 5px black;
+  margin: 5px 1px 1px;
+  padding: 2px;
+  background: rgba(34, 163, 223, .8);
+  border-radius: 2%;
+} 
+  
+    
+/* CABEÇALHO */ 
+#main .mainHeader{
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: space-around;
+}
+  
+#main .mainHeader p{
+  text-align: center;
+  align-self: center;
+}
+
+#main .mainHeader>p{
+  font-family: 'Ubuntu', sans-serif;
+  font-weight: 700;
+}
+  
+#main .mainHeader .menu-img{
+  margin-top:8px;
+  width: 50px;
+}
+  
+#main .mainHeader .logo-img{
+  width: 60px;
+  height: 60px;
+  margin: 2px;
+  padding: 2px;
+}
+  
+nav{
+  background-color:rgb(34, 163, 223);
+  top: 87px;
+  right: 1px;
+  height: 100%;
+  width: 100%;
+  position: fixed;
+  transition: 2s all;
+  z-index: 3;
+  display: none;
+  flex-direction: column;
+}
+  
+nav ul{    
+  display: block;
+  position: fixed;
+  transition: 1s all;
+  z-index: 3;
+  background-color:rgb(34, 163, 223);
+    
+}
+nav ul li{
+  margin: 20px;
+  border-bottom: white 1px solid;
+  height: 100%;
+  padding: 5px;
+  display: block;
+}
+  
+nav ul a{
+  color: white;
+  font-weight: bold;
+  display: block;
+}
+  
+header input{display: none}  
+  
+header input[type="checkbox"]:checked~nav{
+  display: unset;  
+}
+  
+  /* RODAPÉ */
+.rodape{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+}
+  
+.rodape .fa-github{
+  font-size: 1.2rem;
+  color: black;
+}
+
+
+@media screen and (min-width: 600px){
+
+  /* CABEÇALHO */
+  #header h1{
+    font-size: 1.3rem;
+  }
+
+  #main .mainHeader{
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+  }
+
+  #main .mainHeader .menu-img{
+    width: 90px;
+  }
+  #main .mainHeader .logo-img{
+    width: 90px;
+    height: 90px;
+    margin: 2px;
+    padding: 2px;
+  }
+
+  nav{
+    top: 117px;
+  }
+
+  /* RODAPÉ */
+  .rodape{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  .rodape p{
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+
+}
+
+@media screen and (min-width: 750px){
+
+  /* CABEÇALHO */
+  .mainHeader{
+    grid-area: header;
+  }
+
+  #main .mainHeader .menu-img, #main .mainHeader p{
+    display: none;
+  }
+  #main .mainHeader{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  nav{
+    background: unset;
+    right: unset ;
+    height: unset;
+    width: unset;
+    position: unset;
+    transition: unset;
+    z-index: unset;
+    display: unset;
+    flex-direction: unset;
+  }
+
+  nav ul{
+    display: unset;
+    position: unset;
+    transition: unset;
+    background-color:unset;
+  }
+  nav ul li{
+    margin-bottom: unset;
+    border-bottom: unset;
+    height: unset;
+    padding: unset;
+  }
+
+  nav ul a{
+    color: black;
+    font-weight: bold;
+  }
+  header input{
+    display: none;
+  }
+
+  /* MENU */
+  #main nav{
+    display: unset;
+  }
+  
+  #main .menu{
+    display: flex;
+    margin: 0;
+    padding: 0;
+    align-items: center;
+  }
+  #main .menu ul{
+    display: flex;
+    flex-direction: row;
+    margin: 10px;
+    padding: 10px;
+  }
+
+  #main .menu ul li{
+    list-style-type: none;
+    margin: 10px;
+  }
+  #main .menu ul li a{
+    text-decoration: none;
+  }
+
+  #main .menu a{
+    color: black;
+    padding: 3px;
+    font-size: 1.1rem;
+    border-bottom: 1px solid black;
+  }
+  #main .menu a:hover{
+    box-shadow: 2px 2px 8px black;
+    font-weight: bold;
+  }
+
+}
+
+@media screen and (min-width: 1200px){
+
+  #main .mainHeader .logo-img{
+    width: 120px;
+    height: 120px;
+    margin: 2px;
+    padding: 2px;
+  }
+
+}
+

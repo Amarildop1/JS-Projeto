@@ -1,0 +1,211 @@
+@import url("menu.css");
+@import url("footer.css");
+
+/* ***** CONFIG GERAL ***** */
+body{
+  background-image: none;
+}
+
+.galerias{
+  display: flex;
+  flex-direction: row;
+  align-self: center;
+  box-shadow: 2px 2px 5px black;
+  margin: 1% 2% 3% 2%;
+  background: rgba(34, 163, 223, .8);
+  border-radius: 1%;
+}
+#main h1{
+  text-align: center;
+  font-size: 1.8rem;
+}
+
+/* CARDS DA LISTA MESES */
+ul#meses{
+  width: 80%;
+  height: 100%;
+  margin: 2% auto;
+  overflow: hidden;
+  list-style-type: none;
+  padding: 0;
+}
+
+/* ITENS DA LISTA MESES */
+ul#meses li{
+  float: left;
+  width: 200px;
+  height: 200px;
+  margin: 10px;
+  background-color: #ffffff;
+  box-shadow: 2px 2px 3px rgba(0, 0, 0, .4);
+  transition: all .4s ease-in;
+  align-items: center;
+  border: 5px solid white;
+}
+
+ul#meses li span{
+  opacity: 1;
+  color: #ffffff;
+  text-shadow: 1px 1px 1px #000000;
+  background-color: rgba(0, 0, 0, .3);
+  font-size: 1em;
+  line-height: 370px;
+  padding: 5px;
+}
+/* ***** FIM DA CONFIG GERAL ***** */
+
+
+/* ***** BREAKPOINTS MANTER A GALERIA CENTRALIZADA ***** */
+@media screen and (min-width: 375px){
+  ul#meses{
+    width: 65%;
+    height: 100%;
+  }
+}
+@media screen and (min-width: 480px){
+  ul#meses{
+    width: 50%;
+    height: 100%;
+  }
+}
+@media screen and (min-width: 560px){
+  ul#meses{
+    width: 85%;
+    height: 100%;
+  }
+}
+@media screen and (min-width: 600px){
+  ul#meses{
+    width: 80%;
+    height: 100%;
+  }
+}
+@media screen and (min-width: 750px){
+  ul#meses{
+    width: 95%;
+    height: 100%;  
+  }
+}
+@media screen and (min-width: 900px){
+  ul#meses{
+    width: 80%;
+    height: 100%;   
+  }
+}
+
+@media screen and (min-width: 1000px){
+  ul#meses{
+    width: 75%;
+    height: 100%;
+    margin-left: 6rem;
+    padding: 50px;
+  }
+
+  ul#meses li span{
+    opacity: 0;
+  }
+
+  /* Todos os li */
+  ul#meses li:hover {
+    transform: scale(1.5);
+  }
+  /* Todo span dos li */
+  ul#meses li:hover span{
+    opacity: 1;
+  }
+}
+@media screen and (min-width: 1200px){
+  ul#meses{
+    width: 60%;
+    height: 100%;
+    margin-left: 12rem;
+  }
+}
+@media screen and (min-width: 1366px){
+  ul#meses{
+    width: 60%;
+    height: 100%;
+    margin-left: 17rem;
+  }
+}
+/* ***** FIM DOS BREAKPOINTS ***** */
+
+
+
+/* Card de Janeiro */
+ul#meses li#jan{
+  background-image: url(../galeria/janeiro.jpg);
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  background-size: 300px 300px; /* Tamanho aproximado da imagem */
+  background-color: #ffffff;
+}
+ul#meses li#jan:hover{
+  background-position: 0px 0px;
+  background-size: 200px 200px;
+}
+
+/* Card de Fevereiro */
+ul#meses li#fev{
+  background-image: url(../galeria/fevereiro.jpg);
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  background-size: 300px 300px;
+  background-color: #ffffff;
+}
+ul#meses li#fev:hover{
+  background-position: 0px 0px;
+  background-size: 200px 200px;
+}
+
+/* Card de Março */
+ul#meses li#mar{
+  background-image: url(../galeria/marco.jpg);
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  background-size: 300px 300px;
+  background-color: #ffffff;
+}
+ul#meses li#mar:hover{
+  background-position: 0px 0px;
+  background-size: 200px 200px;
+}
+
+/* Card de Abril */
+ul#meses li#abr{
+  background-image: url(../galeria/abril.jpg);
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  background-size: 300px 300px;
+  background-color: #ffffff;
+}
+ul#meses li#abr:hover{
+  background-position: 0px 0px;
+  background-size: 200px 200px;
+}
+
+/* Card de Maio */
+ul#meses li#mai{
+  background-image: url(../galeria/maio.jpg);
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  background-size: 300px 300px;
+  background-color: #ffffff;
+}
+ul#meses li#abr:hover{
+  background-position: 0px 0px;
+  background-size: 200px 200px;
+}
+
+/* Card de Junho */
+ul#meses li#jun{
+  background-image: url(../galeria/junho.jpg);
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  background-size: 300px 300px;
+  background-color: #ffffff;
+}
+ul#meses li#abr:hover{
+  background-position: 0px 0px;
+  background-size: 200px 200px;
+}

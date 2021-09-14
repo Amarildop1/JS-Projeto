@@ -1,0 +1,83 @@
+/* Estilo da página de Equipes */
+
+/*	 REVISAR e Limpar Código 	*/
+
+@import url("menu.css");
+@import url("footer.css");
+
+body{
+  background-image: url("../esperando.jpg");
+  background-attachment: fixed;
+  font-size: 1rem;
+}
+
+
+header{
+  box-shadow: 2px 2px 5px black;
+  margin: 5px 1px 1px;
+  padding: 2px;
+  background: rgba(34, 163, 223, .8);
+  border-radius: 2%;
+}
+
+.equipe img{
+  width: 30%;
+}
+
+.equipes{
+  margin: 2.5%;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto;
+  grid-gap: 0.5rem;
+}
+
+.equipe ul{
+  font-size: 100%;
+  text-decoration: none;
+  list-style-type: none;
+  padding: 0;
+}
+
+span{
+  font-weight: bolder;
+}
+
+li{
+  text-decoration: none;
+  text-decoration-style: none;
+}
+
+.equipe{
+  background: rgba(34, 163, 223, .8);
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  border-radius: 2%;
+}
+
+h1 {
+  font-size: 1.8rem;
+  text-align: center;
+}
+
+
+
+/* ***** PRIMEIRO BREAKING POINT***** */
+@media screen and (min-width: 600px){
+
+  .equipes{
+    grid-template-columns: repeat(2, 1fr);   
+  }
+
+}
+
+/* ***** SEGUNDO BREAKPOINT ***** */
+@media screen and (min-width: 1000px){
+  .equipe ul{
+    font-size: 140%;
+  }
+
+}
+  
+  

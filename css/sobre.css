@@ -1,0 +1,213 @@
+@import url("menu.css");
+@import url("footer.css");
+
+/*  REVISAR  e limpar código 	*/
+
+
+/* CONFIG GERAL */
+body{
+  background-image: none;
+}
+
+.sobre{
+  padding: 5%;
+  text-align: justify;
+  margin: 2.5%;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto;
+  background: rgba(34, 163, 223, .8);
+  align-items: center;
+}
+
+#main .mainHeader .menu-img{
+  width: 50px;
+}
+#main{
+  width: 100%;
+}
+
+h1 {
+  font-size: 2rem;
+  text-align: center;
+}
+h2{
+  text-align: center;
+}
+
+.sobre .imagem{
+  margin: 0 auto;
+}
+.sobre .imagem img{
+  width: 15rem;
+  border-radius: 2%;
+  margin: 3%;
+  border: 2px solid white;
+  box-shadow: 2px 2px 2px black;
+}
+
+
+/* ***** SEÇÃO DE MAPA E CONTATO ***** */
+.mapa-contato{
+  display: flex;
+  flex-direction: column;
+  margin: 2.5%;
+  text-align: justify;
+  background: rgba(34, 163, 223, .8);
+}
+
+.mapa-contato p{
+  text-align: center;
+}
+
+/* MAPA */
+.mapa-contato .mapa{
+  margin: 1%;
+  margin: 0 auto;
+  padding: 4%;
+}
+.mapa-contato .mapa h2{
+  margin-bottom: 6%;
+}
+.mapa-contato .mapa iframe{
+  box-shadow: 2px 2px 2px black;
+  width: 100%;
+  margin-bottom: 4%;
+}
+
+/* CONTATO */
+.mapa-contato .contato{
+  margin: 1%;
+  padding-top: 5%;
+}
+
+/* FORMULÁRIO */
+.mapa-contato .contato .form-contato{
+  width: 15rem;
+  padding: 5%;
+  border-top: 2px solid black;
+  margin: 1px auto;
+}
+
+.mapa-contato .contato .form-contato label{
+  font-size: 1rem;
+  line-height: 1.8rem;
+}
+.mapa-contato .contato .form-contato input{
+  height: 1.7rem;
+  width: 15rem;
+}
+.mapa-contato .contato .form-contato textarea{
+  width: 15rem;
+  margin-bottom: 2%;
+}
+.mapa-contato .contato .form-contato .botao{
+  width: 5rem;
+}
+
+
+
+/* ***** PRIMEIRO BREAKPOINT ***** */
+@media screen and (min-width: 750px){
+  .sobre .imagem img{
+    width: 20rem;
+  }
+
+  h2{
+    text-align: left;
+  }
+
+  .mapa-contato{
+    flex-direction: row;
+    justify-content: space-around;
+  }
+
+  /* MAPA */
+  .mapa-contato .mapa{
+    width: 50%;
+    margin: 0 1% 0 0;
+  }
+  .mapa-contato .mapa iframe{
+    width: 100%;
+    height: 25rem;
+  }
+
+  /* CONTATO */
+  .mapa-contato .contato{
+    width: 50%;
+    margin: 0 0 0 1%;
+    padding-top: 4%;
+  }
+  .mapa-contato .contato h2{
+    margin-left: 14%;
+  }
+
+  /* FORMULÁRIO */
+  .mapa-contato .contato .form-contato{
+    width: 18rem;
+    padding: 3%;
+    border-top: none;
+    border-left: 2px solid black;
+  }
+
+  .mapa-contato .contato .form-contato label{
+    font-size: 1.1rem;
+    line-height: 1.9rem;
+  }
+  .mapa-contato .contato .form-contato input{
+    width: 18rem;
+  }
+  .mapa-contato .contato .form-contato textarea{
+    width: 18rem;
+  }
+  .mapa-contato .contato .form-contato .botao{
+    height: 2rem;
+    font-weight: bold;
+  }
+
+}
+/* ***** FIM DO PRIMEIRO BREAKPOINT ***** */
+
+
+
+
+/* ***** SEGUNDO BREAKPOINT ***** */
+@media screen and (min-width: 1000px){
+  .sobre{
+    line-height: 1.6rem;
+    font-size: 1.2rem;
+  } 
+  .sobre .imagem img{
+    width: 30rem;
+  }  
+
+}   
+/* ***** FIM SEGUNDO BREAKPOINT ***** */
+
+
+
+/* ***** TERCEIRO BREAKPOINT ***** */
+@media screen and (min-width: 1200px){
+  .mapa-contato .contato .form-contato{
+    width: 25rem;
+    padding-left: 20%;
+  }
+
+  .mapa-contato .contato .form-contato label{
+    font-size: 1.2rem;
+    line-height: 2.1rem;
+  }
+  .mapa-contato .contato .form-contato input{
+    height: 1.8rem;
+    width: 23rem;
+  }
+  .mapa-contato .contato .form-contato textarea{
+    width: 23rem;
+    margin-bottom: 3%;
+  }
+  .mapa-contato .contato .form-contato .botao{
+    width: 6rem;
+    height: 2.1rem;
+  }
+}
+/* ***** FIM TERCEIRO BREAKPOINT ***** */

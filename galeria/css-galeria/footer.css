@@ -1,0 +1,4 @@
+/* Responsavel pelo tamanho do footer */
+
+@media screen and (min-width: 750px){.rodape{height: 10vh}}
+@media screen and (min-width: 1200px){.rodape{height: 11vh}}
