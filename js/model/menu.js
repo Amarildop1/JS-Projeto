@@ -1,22 +1,22 @@
 const menu = [
     {
-        link: 'index.html',
+        link: '../index.html',
         nome: 'HOME',
     },
     {
-        link: 'jogos.html',
+        link: '../jogos.html',
         nome: 'JOGOS',
     },
     {
-        link: 'fotos.html',
+        link: '../fotos.html',
         nome: 'FOTOS',
     },
     {
-        link: 'equipes.html',
+        link: '../equipes.html',
         nome: 'EQUIPES',
     },
     {
-        link: 'sobre.html',
+        link: '../sobre.html',
         nome: 'SOBRE A LIGA',
     }
 ];
