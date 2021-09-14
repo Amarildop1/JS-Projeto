@@ -18,7 +18,7 @@ function addItemMenu(itemMenu){
 }
 insereMenu();
 
-/* INSERINDO RODAPÉ NA PÁGINA */
+/* INSERINDO RODAPÉ NAS PÁGINAS */
 function insereItemRodape(){
     for(const item of rodape){
         addTextoRodape(item);
