@@ -1,35 +1,32 @@
-import equipes from "./model/dataSetEquipes.js";
 import menu from "./model/menu.js";
-import rodape from "./model/rodape.js";
 import jogos from "./model/dataSetJogos.js";
+import equipes from "./model/dataSetEquipes.js";
+import rodape from "./model/rodape.js";
 
-function insereJogos(){
-    for(const jogo of jogos){
-        addJogosNaTabela(jogo);
-    }
+//DANDO ERRO NA ORDEM DE EXIBIÇÃO DAS PÁGINAS.
+
+/* ********** INSERINDO MENU NAS PÁGINAS ********** */
+function insereMenu(){
+    menu.map( item => addItemMenu(item) );
 }
 
-    /*         <div class="equipe">
-            <img src="${time.imagem}">
-            <ul class="listaEquipe">
-                <li><span>Técnico: </span>${time.tecnico}</li>
-                <li><span>Fundação: </span>${time.fundacao}</li>
-                <li><span>Ginásio: </span>${time.ginasio}</li>
-                <li><span>Endereço: </span>${time.endereco}</li>
-            </ul>
-        </div> */
+function addItemMenu(itemMenu){
+    const item = `
+                <li><a href="${itemMenu.link}">${itemMenu.nome}</a></li>
+    `;
+    const mostraItemMenu = document.querySelector('.listaMenu');
+    mostraItemMenu.insertAdjacentHTML('beforeend', item);
+}
+//insereMenu();
+/* ************************************************** */
 
-        /*         idjogo: '20',
-        data: '01/12/2021',
-        hora: '08:00',
-        equipeA: 'Jampa',
-        placar: 'x',
-        equipeB: 'Campina',
-        local: 'Vila Olímpica', */
 
+/* ********** INSERINDO JOGOS NA PÁGINA ********** */
+function insereJogos(){
+    jogos.map( jogo => addJogosNaTabela(jogo) );
+}
 
 function addJogosNaTabela(game){
-
     /* JOGOS PARA A TELA DO DESKTOP */
     const jogoTelaDesktop = `
                 <tr>
@@ -59,61 +56,14 @@ function addJogosNaTabela(game){
     `;
     const mostraJogoMobile = document.querySelector('.telaMobile');
     mostraJogoMobile.insertAdjacentHTML('beforeend', jogoTelaMobile);
-
 }
-
-insereJogos();
-
-
+//insereJogos();
+/* ************************************************** */
 
 
-
-/* INSERINDO MENU NAS PÁGINAS */
-function insereMenu(){
-    for(const item of menu){
-        addItemMenu(item);
-    }
-}
-
-function addItemMenu(itemMenu){
-    const item = `
-                <li><a href="${itemMenu.link}">${itemMenu.nome}</a></li>
-    `;
-    const mostraItemMenu = document.querySelector('.listaMenu');
-    mostraItemMenu.insertAdjacentHTML('beforeend', item);
-}
-insereMenu();
-
-
-
-/* INSERINDO RODAPÉ NAS PÁGINAS */
-function insereItemRodape(){
-    for(const item of rodape){
-        addTextoRodape(item);
-    }
-}
-
-function addTextoRodape(text){
-    const texto = `
-    <p>${text.copyright}</p>
-    <p>
-        <a href="${text.link}" target="_blank">
-            ${text.nome} <i class="fab fa-github"></i>
-        </a>
-    </p>`;
-
-    const textoRodape = document.querySelector('.rodape');
-    textoRodape.insertAdjacentHTML('beforeend', texto);
-}
-insereItemRodape();
-
-
-
-/* INSERINDO EQUIPES NA PÁGINA */
+/* ********** INSERINDO EQUIPES NA PÁGINA ********** */
 function insereEquipes(){
-    for(const equipe of equipes){
-        addEquipes(equipe);
-    }
+    equipes.map( equipe => addEquipes(equipe) );
 }
 
 function addEquipes(time){
@@ -128,9 +78,37 @@ function addEquipes(time){
             </ul>
         </div>
     `;
-
     const mostraEquipe = document.querySelector('.equipes');
     mostraEquipe.insertAdjacentHTML('beforeend', equipe);
 }
+//insereEquipes();
+/* ************************************************** */
 
+
+/* ********** INSERINDO RODAPÉ NAS PÁGINAS ********** */
+function insereItemRodape(){
+    rodape.map( item => addTextoRodape(item) );
+}
+
+function addTextoRodape(text){
+    const texto = `
+    <p>${text.copyright}</p>
+    <p>
+        <a href="${text.link}" target="_blank">
+            ${text.nome} <i class="fab fa-github"></i>
+        </a>
+    </p>`;
+
+    const textoRodape = document.querySelector('.rodape');
+    textoRodape.insertAdjacentHTML('beforeend', texto);
+}
+//insereItemRodape();
+/* ************************************************** */
+
+
+insereMenu();
+insereItemRodape();
+insereJogos();
 insereEquipes();
+
+
