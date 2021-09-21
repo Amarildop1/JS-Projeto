@@ -7,7 +7,6 @@ body{
   background-attachment: fixed;
   font-family: 'Lato', 'Ubuntu', sans-serif;
 }
-
 body h1{
   font-family: 'Ubuntu', sans-serif;
 }
@@ -29,7 +28,6 @@ body a:visited{
 .rodape a{
   color: black;
 }
-
 .rodape{
   padding-bottom: 5px;
   font-size: 1.1rem;
@@ -269,4 +267,3 @@ header input[type="checkbox"]:checked~nav{
   }
 
 }
-

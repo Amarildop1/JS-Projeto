@@ -3,16 +3,9 @@
 /*	 Limpar código e verificar redundâncias 	*/
 
 /*
-  Projeto Final de LM - 2019.2
-  Equipe:
-          Amarildo - 20192370028
-          Micael - 20192370029
+  Projeto Final de LS - IFPB
   Desenvolvimento de um site para a Liga Pessoense de Basquete.
-*/
-
-/*
-  body{ font-family: 'Lato', 'Ubuntu', sans-serif; }
-  body h1{ font-family: 'Ubuntu', sans-serif;  }
+  Usando HTML, CSS, JavaScript
 */
 
 body a{
@@ -68,7 +61,6 @@ body a{
   ul.listaParte1,  ul.listaParte2{
     padding: 10px;
   }
-
 }
 
 ul{list-style-type: none}
@@ -156,10 +148,7 @@ ul{list-style-type: none}
     justify-content: space-evenly;
     text-align: center;
   }
-
-}
-/* ***** FIM DO PRIMEIRO BREAKPOINT ***** */
-
+} /* ***** FIM DO PRIMEIRO BREAKPOINT ***** */
 
 
 /* ***** SEGUNDO BREAKPOINT ***** */
@@ -249,9 +238,7 @@ ul{list-style-type: none}
                          "ligacaoExterna ligacaoExterna"
                          "rodape rodape"
   }
-}
-/* ***** FIM DO SEGUNDO BREAKPOINT ***** */
-
+} /* ***** FIM DO SEGUNDO BREAKPOINT ***** */
 
 
 /* ***** TERCEIRO BREAKPOINT ***** */
@@ -320,5 +307,4 @@ ul{list-style-type: none}
                          "ligacaoExterna ligacaoExterna ligacaoExterna"
                          "rodape rodape rodape"
   }
-}
-/* ***** FIM DO TERCEIRO BREAKPOINT ***** */
+} /* ***** FIM DO TERCEIRO BREAKPOINT ***** */

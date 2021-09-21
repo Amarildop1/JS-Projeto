@@ -1,8 +1,6 @@
 import menu from "./model/menu.js";
 import rodape from "./model/rodape.js";
 
-//DANDO ERRO NA ORDEM DE EXIBIÇÃO DAS PÁGINAS.
-
 /* ********** INSERINDO MENU NAS PÁGINAS ********** */
 function insereMenu(){
     menu.map( item => addItemMenu(item) );
@@ -38,6 +36,7 @@ function addTextoRodape(text){
 //insereItemRodape();
 /* ************************************************** */
 
-
 insereMenu();
 insereItemRodape();
+
+export { insereMenu, insereItemRodape }

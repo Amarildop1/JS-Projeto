@@ -3,7 +3,6 @@
 
 /*  REVISAR  e limpar código 	*/
 
-
 /* CONFIG GERAL */
 body{
   background-image: none;
@@ -164,11 +163,7 @@ h2{
     height: 2rem;
     font-weight: bold;
   }
-
-}
-/* ***** FIM DO PRIMEIRO BREAKPOINT ***** */
-
-
+} /* ***** FIM DO PRIMEIRO BREAKPOINT ***** */
 
 
 /* ***** SEGUNDO BREAKPOINT ***** */
@@ -180,10 +175,7 @@ h2{
   .sobre .imagem img{
     width: 30rem;
   }  
-
-}   
-/* ***** FIM SEGUNDO BREAKPOINT ***** */
-
+} /* ***** FIM SEGUNDO BREAKPOINT ***** */
 
 
 /* ***** TERCEIRO BREAKPOINT ***** */
@@ -209,5 +201,4 @@ h2{
     width: 6rem;
     height: 2.1rem;
   }
-}
-/* ***** FIM TERCEIRO BREAKPOINT ***** */
+} /* ***** FIM TERCEIRO BREAKPOINT ***** */
