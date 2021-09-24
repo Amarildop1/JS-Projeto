@@ -1,6 +1,6 @@
-import menu from "./model/menu.js";
+//import menu from "./model/menu.js";
 import equipes from "./model/dataSetEquipes.js";
-import rodape from "./model/rodape.js";
+//import rodape from "./model/rodape.js";
 import { insereMenu, insereItemRodape } from "./main.js";
 
 /* ********** INSERINDO EQUIPES NA PÁGINA ********** */

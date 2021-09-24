@@ -1,6 +1,6 @@
 import jogos from "./model/dataSetJogos.js";
-import menu from "./model/menu.js";
-import rodape from "./model/rodape.js";
+//import menu from "./model/menu.js";
+//import rodape from "./model/rodape.js";
 import { insereMenu, insereItemRodape } from "./main.js";
 
 /* ********** INSERINDO JOGOS NA PÁGINA ********** */
