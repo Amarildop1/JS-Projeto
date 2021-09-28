@@ -61,5 +61,4 @@ const fotosGaleria = [
     }
 ];
 
-
 export default fotosGaleria;
