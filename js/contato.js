@@ -1,19 +1,28 @@
-/* const emailInput = document.querySelector("#email").value;
+//Validação de E-mail
+function validarEmail(){
 
-const padraoEmailCerto = /^[a-z0-9.]+@[a-z0-9]+\.[a-z]+(\.[a-z]+)?/;
-const correto = padraoEmailCerto.test(emailInput);
-function teste(){
-    console.log("Hello");
-    console.log(emailInput);
+    const emailInformado = document.querySelector("#email").value;
+    const padraoDeEmailCerto = /^[a-z0-9.]+@[a-z0-9]+\.[a-z]+(\.[a-z]+)?/;
+    const correto = padraoDeEmailCerto.test(emailInformado);
 
-    if (correto){
-        console.log("DEU CERTO!");
-    }else{
-        console.log("ERRADO!");
+    if (!correto){
+        alert("O e-mail informado é Inválido ou está vazio!");
     }
 }
-console.log("Fora " + emailInput);
- */
 
+//Validação de Telefone
+function validarTelefone(){
 
-//export default { teste2 };
+    const telefoneInformado = document.querySelector("#telefone").value;
+    const padraoTelefoneCerto = /\D?\d{2}\D?\s?\d{5}-?\d{4}/;
+    const correto = padraoTelefoneCerto.test(telefoneInformado);
+
+    if (!correto){
+        alert("O telefone informado é Inválido ou está vazio!");
+    }
+}
+
+function validacoes(){
+    validarEmail();
+    validarTelefone();
+}

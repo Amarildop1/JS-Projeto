@@ -12,7 +12,7 @@
         <link href="https://fonts.googleapis.com/css?family=Ubuntu:400,400i,500,500i&display=swap&subset=latin-ext" rel="stylesheet">
         <title>Sobre | Liga Pessoense de Basquete</title>
         <script src="./js/main.js" type="module"></script>
-        <script src="./js/contato.js" type="module"></script>
+
     </head>
 
     <body>
@@ -132,21 +132,23 @@
                 <div class="contato">
                     <h2>Contato</h2>
                     
-                    <form class="form-contato">            
-                        <label for="nome">Nome:</label><br>
+                    <form method="GET" class="form-contato">            
+                        <label for="nome">Nome:*</label><br>
                         <input type="text" required placeholder="Qual seu nome?" id="nome" name="nome" maxlength="50"><br>
 
-                        <label for="email">E-mail:</label><br>
-                        <input type="email" required placeholder="email@o.restante.do.email" id="email" name="email" maxlength="70"><br>
+                        <label for="tel">Telefone:*</label><br>
+                        <input type="tel" placeholder="99 98799-8877" id="telefone" name="telefone" maxlength="70"><br>
+
+                        <label for="email">E-mail:*</label><br>
+                        <input type="email" placeholder="email@o.restante.do.email" id="email" name="email" maxlength="70"><br>
                         
-                        <label for="assunto">Assunto:</label><br>
-                        <input type="text" placeholder="Qual o assunto?" id="assunto" name="assunto" maxlength="40"><br>
+                        <label for="assunto">Assunto:*</label><br>
+                        <input type="text" required placeholder="Qual o assunto?" id="assunto" name="assunto" maxlength="40"><br>
 
-                        <label for="mensagem">Mensagem:</label><br>
-                        <textarea name="mensagem" id="mensagem" rows="5" cols="30" placeholder="Digite sua mensagem aqui"></textarea><br>
+                        <label for="mensagem">Mensagem:*</label><br>
+                        <textarea name="mensagem" id="mensagem" rows="5" cols="30" required placeholder="Digite sua mensagem aqui"></textarea><br>
 
-                        <input class="botao" type="submit" name="enviar" id="enviar" value="Enviar"><br><br> 
-                        <!-- <button class="botao" type="submit" id="enviar">ENVIAR</button><br><br> --> 
+                        <input onclick="validacoes()" class="botao" type="submit" name="enviar" id="enviar" value="Enviar"><br><br> 
 
                     </form> 
                 </div>
@@ -157,5 +159,7 @@
 
             </footer>
         </section>
+        <script src="./js/contato.js"></script>
+
     </body>
 </html>
