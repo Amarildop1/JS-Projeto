@@ -1,12 +1,10 @@
+import jogos from "./model/dataSetJogos.js";
+//import menu from "./model/menu.js";
+//import rodape from "./model/rodape.js";
 import { insereMenu, insereItemRodape } from "./main.js";
 
-const api = './js/dados/dataSetJogos.json';
-
 /* ********** INSERINDO JOGOS NA PÁGINA ********** */
-async function insereJogos(){
-    const response = await fetch(api);
-    const jogos = await response.json();
-    
+function insereJogos(){
     jogos.map( jogo => addJogosNaTabela(jogo) );
 }
 

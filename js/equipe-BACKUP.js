@@ -1,12 +1,10 @@
+//import menu from "./model/menu.js";
+import equipes from "./model/dataSetEquipes.js";
+//import rodape from "./model/rodape.js";
 import { insereMenu, insereItemRodape } from "./main.js";
 
-const api = './js/dados/dataSetEquipes.json';
-
 /* ********** INSERINDO EQUIPES NA PÁGINA ********** */
-async function insereEquipes(){
-    const response = await fetch(api);
-    const equipes = await response.json();
-
+function insereEquipes(){
     equipes.map( equipe => addEquipes(equipe) );
 }
 
